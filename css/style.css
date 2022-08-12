@@ -1,0 +1,419 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(4, 78, 81);
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.login-contents input {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: 2px solid rgb(66, 108, 107);
+    outline: none;
+    color: rgb(180, 180, 180);
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-contents button {
+    padding: 5px 8px 5px 8px;
+    font-size: 1em;
+    background-color: rgb(32, 147, 147);
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    width: 50%;
+    color: #222;
+}
+
+.logo {
+    position: absolute;
+    width: 90%;
+    top: -100px;
+}
+
+.err {
+    background-color: rgba(255, 0, 0, 0.215);
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    color: grey;
+    text-align: center;
+    max-width: 100%;
+}
+
+.login-contents input:hover {
+    border: 2px solid rgb(0, 182, 182);
+}
+
+.login-form {
+    transition: transform 0.75s;
+}
+
+.application {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right bottom, transparent, rgba(1, 114, 114, 0.694));
+    background-size: cover;
+    transform: translate(4000px);
+    transition: transform 0.75s;
+    color: #222;
+    padding: 20px;
+    font-size: 1em;
+    width: 100vw;
+}
+
+.application .welcome-text {
+    font-size: 1.7em;
+}
+
+.application .welcome-text span {
+    font-weight: 700;
+}
+
+.application header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    margin-bottom: 40px;
+}
+
+.logout {
+    cursor: pointer;
+}
+
+.db-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.db-info .right-content {
+    font-size: 1.5em;
+}
+
+
+.logo-app {
+    width: 300px;
+}
+
+.container {
+    display: grid;
+    margin: 20px 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    grid-template-areas:
+        "mov aside";
+    grid-auto-columns: 1fr;
+
+}
+
+.movements {
+    height: 420px;
+    background-color: rgba(255, 255, 255, 0.632);
+    border-radius: 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    grid-area: mov;
+}
+
+.movement-row {
+    width: 100%;
+    min-height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 40px;
+    animation: fadeIn 0.5s linear 0s 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.movement-row .movement-amount {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.icon-movement {
+    color: white;
+    border-radius: 15px;
+    padding: 2px 10px;
+}
+
+.deposit .icon-movement {
+    background-color: rgb(0, 90, 0);
+
+}
+
+.withdraw .icon-movement {
+    background-color: rgb(101, 10, 10);
+}
+
+main aside {
+    height: 100%;
+    color: white;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:
+        "one two"
+        "three four";
+    grid-auto-columns: auto;
+    box-sizing: border-box;
+    grid-area: aside;
+}
+
+.action {
+    background-color: #222;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    gap: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.action:nth-child(1) {
+    background-image: linear-gradient(to right bottom, rgba(19, 124, 0, 0.632), rgba(79, 145, 74, 0.726));
+    grid-area: one;
+}
+
+.action:nth-child(2) {
+    background-image: linear-gradient(to left top, rgba(255, 174, 0, 0.632), rgba(211, 112, 0, 0.902));
+
+}
+
+.action:nth-child(3) {
+    background-image: linear-gradient(to right bottom, rgba(0, 124, 124, 0.632), rgba(74, 121, 145, 0.74));
+
+}
+
+.action:nth-child(4) {
+    background-image: linear-gradient(to right bottom, rgba(124, 0, 0, 0.785), rgba(145, 74, 74, 0.573));
+
+}
+
+.action input,
+.action select {
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.208);
+    text-align: center;
+    color: white;
+}
+
+.action input::placeholder {
+    color: rgba(255, 255, 255, 0.384);
+}
+
+.action button {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(44, 6, 6);
+    color: white;
+    cursor: pointer;
+}
+
+.action-1 button {
+    background-color: rgb(0, 128, 49);
+}
+
+.action-2 button {
+    background-color: darkgoldenrod;
+}
+
+.action-3 button {
+    background-color: teal;
+}
+
+
+.action option {
+    background-color: darkgoldenrod;
+    padding: 5px;
+}
+
+.acccount-balance-detail {
+    display: flex;
+    gap: 30px;
+}
+
+footer-start {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 70px;
+}
+
+footer-start div {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.bold-me {
+    font-weight: bolder;
+}
+
+.totalProfit {
+    color: green;
+}
+
+.totalLoan {
+    color: darkgoldenrod;
+}
+
+.totalLoss {
+    color: red;
+}
+
+.movement-row .date-movement,
+.date {
+    color: grey;
+    font-size: 14px;
+}
+
+@media only screen and (max-width:1100px) {
+    .container {
+        margin: 40px 170px;
+        grid-template-areas:
+            "mov"
+            "aside";
+    }
+
+    footer-start {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .current-balance {
+        font-size: 40px;
+    }
+
+    .db-info h1 {
+        font-size: 28px;
+    }
+
+    .logo-app {
+        width: 200px;
+    }
+
+    .welcome-text {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width:608px) {
+    .logo-app {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(120%);
+    }
+
+    .application header {
+        margin-bottom: 100px;
+    }
+
+    .container {
+        margin: 40px 50px;
+    }
+
+    main aside {
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four";
+    }
+
+    .movement-row {
+        padding: 0 10px;
+    }
+
+    .movement-row .movement-amount {
+        font-size: 18px;
+    }
+
+    .acccount-balance-detail div {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:445px) {
+    .container {
+        margin: 40px 10px;
+
+    }
+
+    .left-content h1 {
+        font-size: 20px;
+    }
+
+    .logout {
+        font-size: 20px;
+    }
+
+    .welcome-text {
+        font-size: 20px !important;
+    }
+
+    .current-balance {
+        font-size: 24px !important;
+    }
+}

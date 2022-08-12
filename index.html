@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PakPay</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="login-form">
+        <img class="logo" src="images/logo.png" alt="">
+        <div class="login-contents">
+            <input class="username" type="text" placeholder="username....">
+            <br>
+            <input class="password" type="password" placeholder="password....">
+            <br>
+            <div class="buttons">
+                <button>Login</button>
+                <button class="sign-up">Sign up</button>
+            </div>
+
+        </div>
+        <p></p>
+    </div>
+    <div class="application">
+        <header>
+            <div class="welcome-text">
+                Welcome! Mr. <span class="account-username">Dummy</span>
+            </div>
+            <img class="logo-app" src="images/logo.png" alt="">
+
+            <h2 class="logout">&RightArrow; Log Out</h2>
+        </header>
+        <main>
+            <div class="db-info">
+                <div class="left-content">
+                    <h1>Current Balance</h1>
+                    <div class="date-info">As of <span class="date">12/42/12</span></div>
+                </div>
+                <div class="right-content">
+                    <h1 class="current-balance">25,125$</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="movements">
+
+                </div>
+                <aside>
+                    <div class="action action-1">
+                        <h1 class="action-about">Transfer Money</h1>
+                        <input class="transfer-user" type="text" placeholder="Reciever's username">
+                        <input class="transfer-amount" type="text" placeholder="amount">
+                        <button class="transfer-btn">Transfer</button>
+                    </div>
+                    <div class=" action action-2">
+                        <h1 class="action-about">Transact money</h1>
+                        <select name="" id="">
+                            <option value="Deposit">Deposit</option>
+                            <option value="Withdraw">Withdraw</option>
+                        </select>
+                        <input class="transact-amount" type="text" placeholder="amount">
+                        <button class="transact-btn">Transact</button>
+                    </div>
+                    <div class=" action action-3">
+                        <h1 class="action-about">Request Loan</h1>
+                        <input class="request-user" type="text" placeholder="username">
+                        <input class="request-amount" type="text" placeholder="amount">
+                        <button class="request-btn">Request</button>
+                    </div>
+                    <div class=" action action-4">
+                        <h1 class="action-about">Close Account</h1>
+                        <input class="close-user" type="text" placeholder="username">
+                        <input class="close-pass" type="text" placeholder="password">
+                        <button class="close-btn">Close</button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <footer-start style="margin-bottom:70px;">
+            <div class="acccount-balance-detail">
+                <div>Total Deposits: <br> <span class="totalProfit bold-me">12,301$</span> </div>
+                <div>Total Withdraws: <br> <span class="totalLoss bold-me">12,301$</span></div>
+                <div>Total loan:<br> <span class="totalLoan bold-me">12,301$</span></div>
+            </div>
+            <p class="logout-timer">You will be logged out in <span style="font-weight:bolder;">2:00</span> </p>
+        </footer-start>
+        <hr>
+        <footer style="text-align: center;padding: 80px">
+            &copy;Copyright reserved by <span class="bold-me">Syed zaki haider</span>, Don't use this to teach or claim
+            as your own product or design, use it as your portfolio.
+        </footer>
+    </div>
+    <script src="js/script.js"> </script>
+</body>
+
+</html>
